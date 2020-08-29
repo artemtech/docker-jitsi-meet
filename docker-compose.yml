@@ -3,7 +3,8 @@ version: '3'
 services:
     # Frontend
     web:
-        image: jitsi/web:stable-4857
+        build: ./web
+        image: jitsi/web:stable-4857-custom-branding
         restart: ${RESTART_POLICY}
         ports:
             - '${HTTP_PORT}:80'
